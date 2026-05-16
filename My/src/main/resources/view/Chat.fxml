@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controller.ChatController"
+            style="-fx-background-color: #1a1a2e;">
+    <left>
+        <VBox style="-fx-background-color: #16213e; -fx-padding: 0;" prefWidth="220">
+            <HBox style="-fx-background-color: #0f3460; -fx-padding: 15 10;"
+                  alignment="CENTER_LEFT" spacing="10"
+                  onMouseClicked="#handleOpenProfile">
+                <Circle fx:id="myAvatar" radius="18"
+                        style="-fx-fill: #e94560;"/>
+                <VBox>
+                    <Label fx:id="currentUserLabel"
+                           style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                    <Label text="● онлайн"
+                           style="-fx-text-fill: #4ecca3; -fx-font-size: 11px;"/>
+                </VBox>
+            </HBox>
+            <HBox style="-fx-padding: 8 10; -fx-background-color: #16213e;">
+                <TextField fx:id="searchField"
+                           promptText="🔍 Пошук..."
+                           HBox.hgrow="ALWAYS"
+                           style="-fx-background-color: #0f3460;
+                                  -fx-text-fill: white;
+                                  -fx-prompt-text-fill: #888;
+                                  -fx-background-radius: 20;
+                                  -fx-padding: 6 12;
+                                  -fx-border-width: 0;"/>
+            </HBox>
+            <Label text="КОНТАКТИ"
+                   style="-fx-text-fill: #888; -fx-font-size: 10px;
+                          -fx-padding: 5 15; -fx-font-weight: bold;"/>
+            <ListView fx:id="contactsList"
+                      VBox.vgrow="ALWAYS"
+                      style="-fx-background-color: transparent;
+                 -fx-background: #16213e;
+                 -fx-border-width: 0;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: #1a1a2e;">
+            <HBox fx:id="chatHeader"
+                  style="-fx-background-color: #16213e;
+                         -fx-padding: 12 15;
+                         -fx-border-color: #0f3460;
+                         -fx-border-width: 0 0 1 0;"
+                  alignment="CENTER_LEFT" spacing="12">
+                <Circle fx:id="chatAvatar" radius="18"
+                        style="-fx-fill: #4ecca3;"/>
+                <VBox>
+                    <Label fx:id="chatNameLabel"
+                           style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                    <Label fx:id="chatStatusLabel" text="в мережі"
+                           style="-fx-text-fill: #4ecca3; -fx-font-size: 11px;"/>
+                    <Label fx:id="typingLabel"
+                           style="-fx-text-fill: #4ecca3; -fx-font-size: 11px; -fx-font-style: italic;"
+                           text=""/>
+                </VBox>
+            </HBox>
+            <ListView fx:id="messagesList"
+                      VBox.vgrow="ALWAYS"
+                      style="-fx-background-color: transparent;
+                 -fx-border-width: 0;
+                 -fx-background: #1a1a2e;"/>
+            <HBox style="-fx-background-color: #16213e;
+             -fx-padding: 10 15;
+             -fx-border-color: #0f3460;
+             -fx-border-width: 1 0 0 0;"
+                  alignment="CENTER" spacing="10">
+                <Button text="😊" onAction="#handleEmojiPanel"
+                        style="-fx-background-color: transparent;
+                   -fx-font-size: 18px;
+                   -fx-cursor: hand;
+                   -fx-border-width: 0;
+                   -fx-padding: 5;"/>
+                <TextField fx:id="messageField"
+                           promptText="Написати повідомлення..."
+                           HBox.hgrow="ALWAYS"
+                           onAction="#handleSend"
+                           style="-fx-background-color: #0f3460;
+                      -fx-text-fill: white;
+                      -fx-prompt-text-fill: #888;
+                      -fx-background-radius: 20;
+                      -fx-padding: 10 15;
+                      -fx-border-width: 0;"/>
+                <Button text="➤"
+                        onAction="#handleSend"
+                        style="-fx-background-color: #e94560;
+                   -fx-text-fill: white;
+                   -fx-font-size: 16px;
+                   -fx-background-radius: 50;
+                   -fx-min-width: 40;
+                   -fx-min-height: 40;
+                   -fx-cursor: hand;
+                   -fx-border-width: 0;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

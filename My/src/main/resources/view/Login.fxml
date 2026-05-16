@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.example.controller.LoginController"
+           style="-fx-background-color: #1a1a2e;">
+    <Circle radius="200"
+            style="-fx-fill: #16213e;"
+            translateX="-200" translateY="-150"/>
+    <Circle radius="150"
+            style="-fx-fill: #0f3460;"
+            translateX="200" translateY="200"/>
+    <VBox alignment="CENTER" spacing="20"
+          maxWidth="380"
+          style="-fx-background-color: #16213e;
+                 -fx-background-radius: 20;
+                 -fx-padding: 40 50;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 10);">
+        <VBox alignment="CENTER" spacing="8">
+            <StackPane>
+                <Circle radius="35" style="-fx-fill: #e94560;"/>
+                <Label text="M"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 28px;
+                              -fx-font-weight: bold;"/>
+            </StackPane>
+            <Label text="Messenger"
+                   style="-fx-text-fill: white;
+                          -fx-font-size: 26px;
+                          -fx-font-weight: bold;"/>
+            <Label text="Вітаємо назад!"
+                   style="-fx-text-fill: #888;
+                          -fx-font-size: 13px;"/>
+        </VBox>
+        <VBox spacing="12" maxWidth="300">
+            <VBox spacing="5">
+                <Label text="ЛОГІН"
+                       style="-fx-text-fill: #4ecca3;
+                              -fx-font-size: 11px;
+                              -fx-font-weight: bold;"/>
+                <TextField fx:id="usernameField"
+                           promptText="Введіть логін"
+                           style="-fx-background-color: #0f3460;
+                                  -fx-text-fill: white;
+                                  -fx-prompt-text-fill: #555;
+                                  -fx-background-radius: 10;
+                                  -fx-padding: 12 15;
+                                  -fx-font-size: 14px;
+                                  -fx-border-width: 0;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="ПАРОЛЬ"
+                       style="-fx-text-fill: #4ecca3;
+                              -fx-font-size: 11px;
+                              -fx-font-weight: bold;"/>
+                <PasswordField fx:id="passwordField"
+                               promptText="Введіть пароль"
+                               style="-fx-background-color: #0f3460;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #555;
+                                      -fx-background-radius: 10;
+                                      -fx-padding: 12 15;
+                                      -fx-font-size: 14px;
+                                      -fx-border-width: 0;"/>
+            </VBox>
+        </VBox>
+        <VBox spacing="10" maxWidth="300">
+            <Button text="Увійти"
+                    onAction="#handleLogin"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: #e94560;
+                           -fx-text-fill: white;
+                           -fx-font-size: 14px;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 10;
+                           -fx-padding: 12;
+                           -fx-cursor: hand;
+                           -fx-border-width: 0;"/>
+            <Button text="Реєстрація"
+                    onAction="#handleRegister"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: #4ecca3;
+                           -fx-font-size: 14px;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 10;
+                           -fx-padding: 12;
+                           -fx-cursor: hand;
+                           -fx-border-color: #4ecca3;
+                           -fx-border-radius: 10;
+                           -fx-border-width: 1.5;"/>
+        </VBox>
+        <Label fx:id="errorLabel"
+               style="-fx-font-size: 12px;"
+               wrapText="true"
+               maxWidth="280"/>
+
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,66 @@
+.list-view {
+    -fx-background-color: #16213e;
+    -fx-background: #16213e;
+    -fx-border-width: 0;
+}
+
+.list-view .list-cell {
+    -fx-background-color: #16213e;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #0f3460;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #1a2a4a;
+}
+
+.scroll-bar {
+    -fx-background-color: #16213e;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #0f3460;
+    -fx-background-radius: 4;
+}
+.text-area {
+    -fx-background-color: #16213e;
+    -fx-background: #16213e;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+}
+
+.text-area .content {
+    -fx-background-color: #16213e;
+    -fx-background: #16213e;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: #16213e;
+}
+
+.text-area .scroll-pane .viewport {
+    -fx-background-color: #16213e;
+}
+
+.text-field {
+    -fx-background-color: #16213e;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+}
+.text-field:focused {
+    -fx-border-color: #4ecca3;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.password-field:focused {
+    -fx-border-color: #4ecca3;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
